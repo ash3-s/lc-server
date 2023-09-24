@@ -15,9 +15,6 @@ app.use(express.urlencoded({ extended: true }));
 // app.use(express.static('public'));
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
 
 const { MongoClient } = require("mongodb");
 
@@ -28,6 +25,9 @@ async function connectToDB() {
   try {
     await client.connect();
     console.log("Connected to MongoDB");
+    app.listen(port, () => {
+      console.log(`Server listening on port ${port}`);
+    });
   } catch (err) {
     console.error("Error connecting to MongoDB:", err);
   }
