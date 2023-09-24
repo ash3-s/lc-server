@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-const port = 3000; // Change to your desired port
+const port = process.env.PORT || 3000; // Change to your desired port
 
 // Middleware to parse JSON and form data
 app.use(cors());
