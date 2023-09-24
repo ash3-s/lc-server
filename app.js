@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 
@@ -20,8 +21,7 @@ app.listen(port, () => {
 
 const { MongoClient } = require("mongodb");
 
-const uri =
-  "mongodb+srv://fifa14gamer2016:RoERzywdRPfa1JLu@leetcluster.wxjnof1.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://fifa14gamer2016:${process.env.MONGO_PASS}@leetcluster.wxjnof1.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri);
 
 async function connectToDB() {
