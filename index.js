@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 const { MongoClient, ObjectId } = require("mongodb");
 const e = require("express");
 
-const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@leetcluster.wxjnof1.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://fifa14gamer2016:${process.env.MONGO_PASS}@leetcluster.wxjnof1.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri);
 
 async function connectToDB() {
